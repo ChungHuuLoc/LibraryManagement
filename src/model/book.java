@@ -75,6 +75,5 @@ public class book {
     public void setPageNum(int pageNum) {
         this.pageNum = pageNum;
     }
-    
-    
+
 }
