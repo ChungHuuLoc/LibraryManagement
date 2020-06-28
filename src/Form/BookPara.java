@@ -284,8 +284,8 @@ public class BookPara extends javax.swing.JDialog {
                     .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jLabel2)
                         .addComponent(txtBookName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jLabel4)
@@ -372,31 +372,7 @@ public class BookPara extends javax.swing.JDialog {
        String strYearReleash    = txtYear.getText();
        String strQuanty         = txtQuanty.getText();
                
-        try {
-            //2. Nap driver tuong ung voi database tren SQL Server:
-            Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
-            
-            //3. Ket noi den database
-            String connectionUrl = "jdbc:sqlserver://localhost:1433;"
-                    + "databaseName=ProjectLibraryManager;user=sa;password=123";
-            Connection con = DriverManager.getConnection(connectionUrl);
-            
-            if (con != null) {
-                System.out.println("Connection is successful.");
-            } else {
-                System.out.println("Connection is failed. Please try again.");
-            }                
-            
-            //4. Tao va thuc hien cau lenh SQL:
-            Statement stm =  con.createStatement();           
-            
-            String sql = "insert into Book(BookName,Category,BookAuthor,BookPub,BookYearReleash,BookQuantity) values('"+strBookName+"','"+strCategory+"','"+strAuthor+"','"+strPuclisher+"','"+strYearReleash+"','"+strQuanty+"')";
-            stm.executeUpdate(sql);
-                
-            con.close();
-        } catch (ClassNotFoundException | SQLException ex) {
-            ex.printStackTrace();
-        }
+      
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed

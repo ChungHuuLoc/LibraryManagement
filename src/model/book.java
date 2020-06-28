@@ -17,8 +17,8 @@ public class book {
     String category;
     String author;
     String publisher;
-    Date dayPublish;
-    int pageNum;
+    int yearPublish;
+    int quantity;
 
     public int getId() {
         return id;
@@ -60,20 +60,22 @@ public class book {
         this.publisher = publisher;
     }
 
-    public Date getDayPublish() {
-        return dayPublish;
+    public int getYearPublish() {
+        return yearPublish;
     }
 
-    public void setDayPublish(Date dayPublish) {
-        this.dayPublish = dayPublish;
+    public void setYearPublish(int yearPublish) {
+        this.yearPublish = yearPublish;
     }
 
-    public int getPageNum() {
-        return pageNum;
+    public int getQuantity() {
+        return quantity;
     }
 
-    public void setPageNum(int pageNum) {
-        this.pageNum = pageNum;
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
     }
+
+
 
 }
